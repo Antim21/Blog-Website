@@ -1,0 +1,68 @@
+body {
+    font-family: 'Inter', sans-serif; /* Default to a readable font */
+    background-color: #F8FAFC; 
+}
+.font-handwriting {
+    font-family: 'Caveat', cursive;
+}
+.font-cursive {
+    font-family: 'Marck Script', cursive;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.75); /* Slightly more opaque for readability */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Glassmorphism Card Style for Projects & Blog */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.glass-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
+}
+.text-shadow {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Cohesive Light Pastel Palette */
+.bg-playground { background-color: #e0f2fe; color: #0369a1; } /* Sky */
+
+.active-filter {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Scrollbar for 'All' projects */
+.project-grid-scrollable {
+    max-height: 600px; /* Adjust as needed */
+    overflow-y: auto;
+    padding-right: 1rem; /* For scrollbar spacing */
+}

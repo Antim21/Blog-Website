@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antim Maurya - Personal Blog & Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marck+Script&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased text-lg">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-slate-200">
+        <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="font-handwriting self-center text-4xl font-bold whitespace-nowrap text-slate-800">Antim Maurya</span>
+            </a>
+            <div class="flex md:order-2">
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 font-cursive text-xl">
+                    <li><a href="#home" class="block py-2 px-3 text-indigo-600 rounded md:bg-transparent md:p-0">Home</a></li>
+                    <li><a href="#about" class="block py-2 px-3 text-slate-700 rounded hover:text-green-600 md:p-0">About</a></li>
+                    <li><a href="#blog" class="block py-2 px-3 text-slate-700 rounded hover:text-orange-600 md:p-0">Blog</a></li>
+                    <li><a href="#projects" class="block py-2 px-3 text-slate-700 rounded hover:text-purple-600 md:p-0">Projects</a></li>
+                    <li><a href="#playground" class="block py-2 px-3 text-slate-700 rounded hover:text-sky-600 md:p-0">AI Playground</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-slate-700 rounded hover:text-teal-600 md:p-0">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://i.pinimg.com/originals/ed/3b/fb/ed3bfb3916df74fe2efc6fe842eab397.gif" alt="Animated night sky" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+            <div class="content-wrapper p-4">
+                <h1 class="font-handwriting text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">A Creative Mind in a Digital World</h1>
+                <p class="text-2xl text-slate-200 max-w-4xl mx-auto mb-8 font-cursive drop-shadow-lg">I'm Antim Maurya, building elegant solutions for the web. Explore my thoughts, projects, and journey.</p>
+                <a href="#projects" class="bg-indigo-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="relative py-20 sm:py-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://i.pinimg.com/originals/97/44/c9/9744c9c4bb93173017b8173680799050.gif" alt="Animated background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/25"></div>
+            </div>
+            <div class="relative z-10 max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-handwriting text-5xl sm:text-6xl font-bold text-white mb-6">About Me</h2>
+                <p class="mb-4 text-lg leading-relaxed text-slate-200 text-left md:text-center">Hello! I'm Antim, a developer and writer with a keen interest in building things that live on the internet. My journey into the tech world started with a simple "Hello, World!" and has since evolved into a passion for creating elegant, efficient, and user-friendly digital experiences.</p>
+                <p class="mb-6 text-lg leading-relaxed text-slate-200 text-left md:text-center">Whether I'm crafting responsive websites, or writing about my latest discoveries, I'm driven by a desire to learn, innovate, and share knowledge.</p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <span class="bg-slate-700/50 text-slate-200 text-sm font-medium px-4 py-2 rounded-full">Web Development</span>
+                    <span class="bg-slate-700/50 text-slate-200 text-sm font-medium px-4 py-2 rounded-full">UI/UX Design</span>
+                    <span class="bg-slate-700/50 text-slate-200 text-sm font-medium px-4 py-2 rounded-full">Content Creation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="relative py-20 sm:py-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://t4.ftcdn.net/jpg/02/97/79/83/360_F_297798377_VB9egqGnRKcZxU53wybEHLRnnTrcvlAH.jpg" alt="Abstract background" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/ffedd5/9a3412?text=Background+Error';">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl font-bold text-white drop-shadow-lg">Latest Musings</h2>
+                    <p class="mt-3 text-2xl font-cursive text-slate-200 drop-shadow-lg">Thoughts, tutorials, and stories from my journey.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599658880436-c61792e70672?q=80&w=2070&auto=format&fit=crop" alt="AI and Coding" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-slate-300 font-sans font-semibold mb-2 text-shadow">AI and Prompt Engineering</p>
+                            <h3 class="text-2xl font-bold mb-3 text-white text-shadow">Coding with AI: Can Prompt Engineering Replace Traditional Programming?</h3>
+                            <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">AI has flipped the script on how we build software. Instead of hand-coding every conditional and data transformation...</p>
+                            <a href="https://medium.com/@antimmaurya2103/coding-with-ai-can-prompt-engineering-replace-traditional-programming-4a777f0636f9" target="_blank" class="font-semibold text-indigo-300 hover:text-indigo-200">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1974&auto=format&fit=crop" alt="AI in Software Development" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-slate-300 font-sans font-semibold mb-2 text-shadow">AI & Software Development</p>
+                            <h3 class="text-2xl font-bold mb-3 text-white text-shadow">AI to Replace Humans for Small Tasks in Software Development</h3>
+                            <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">Most developers don’t enjoy writing repetitive code or fixing the same kinds of bugs every day. That’s exactly why AI is...</p>
+                            <a href="https://medium.com/@antimmaurya2103/why-everyone-wants-ai-to-replace-humans-for-small-tasks-in-software-development-876ef37d20cd" target="_blank" class="font-semibold text-indigo-300 hover:text-indigo-200">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop" alt="Monetizing Prompts" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-slate-300 font-sans font-semibold mb-2 text-shadow">AI & Prompt Engineering</p>
+                            <h3 class="text-2xl font-bold mb-3 text-white text-shadow">I Tried Monetizing My Prompt Library — Here’s What Happened</h3>
+                            <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">Prompts that reliably produced clean blog drafts, image ideas, code snippets, and SEO-optimized copy. Could I turn those into income?</p>
+                            <a href="https://medium.com/@antimmaurya2103/i-tried-monetizing-my-prompt-library-heres-what-happened-1f2f815cd671" target="_blank" class="font-semibold text-indigo-300 hover:text-indigo-200">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="relative py-20 sm:py-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://t3.ftcdn.net/jpg/07/33/90/18/360_F_733901878_mA9lvDJkhR2RA4Ex8Jlch4Nay1VgKMXc.jpg" alt="Abstract colorful background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl font-bold text-white text-shadow">Featured Projects</h2>
+                    <p class="mt-3 text-2xl font-cursive text-slate-200 text-shadow">A selection of projects I'm proud of.</p>
+                </div>
+                <div class="flex justify-center space-x-2 md:space-x-4 mb-12">
+                    <button class="filter-btn active-filter glass-card px-5 py-2 text-sm md:text-base font-semibold rounded-full transition text-white" data-filter="all">All</button>
+                    <button class="filter-btn glass-card px-5 py-2 text-sm md:text-base font-semibold rounded-full transition text-slate-200 hover:bg-white/20" data-filter="web">Web Dev</button>
+                    <button class="filter-btn glass-card px-5 py-2 text-sm md:text-base font-semibold rounded-full transition text-slate-200 hover:bg-white/20" data-filter="ai">AI</button>
+                    <button class="filter-btn glass-card px-5 py-2 text-sm md:text-base font-semibold rounded-full transition text-slate-200 hover:bg-white/20" data-filter="design">Design</button>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left" id="project-grid">
+                    <!-- Web Dev Projects -->
+                    <div class="project-card glass-card rounded-xl p-6" data-category="web">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Real Time Code Editor</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">A scalable real-time code editor using Node.js, WebSockets, and MongoDB for multiple users, with support for multiple languages and version tracking.</p>
+                        <a href="https://codebuddytextedit.netlify.app/" target="_blank" class="font-semibold text-indigo-300 hover:underline">Live Demo</a>
+                    </div>
+                    <div class="project-card glass-card rounded-xl p-6" data-category="web">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Budget Tracker</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">A simple and intuitive expense tracker to help you manage your finances efficiently, built with vanilla web technologies.</p>
+                        <a href="https://github.com/Antim21/Budget-Tracker" target="_blank" class="font-semibold text-indigo-300 hover:underline">View Project</a>
+                    </div>
+                    <!-- Design Projects -->
+                    <div class="project-card glass-card rounded-xl p-6" data-category="design">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Inftastructure Ready - Food-Website</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">A visually appealing and responsive frontend for a food website, designed to provide an engaging user experience for food enthusiasts.</p>
+                        <a href="https://github.com/Antim21/Food-Website" target="_blank" class="font-semibold text-indigo-300 hover:underline">View Project</a>
+                    </div>
+                    <div class="project-card glass-card rounded-xl p-6" data-category="design">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Simple Dice Game</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">A fun and interactive dice game built with vanilla HTML, CSS, and JavaScript. Perfect for a quick break!</p>
+                        <a href="https://github.com/Antim21/Dice-Game" target="_blank" class="font-semibold text-indigo-300 hover:underline">View Project</a>
+                    </div>
+                    <div class="project-card glass-card rounded-xl p-6" data-category="design">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Blog Website</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">The very blog and portfolio you're exploring now, built with modern web technologies and interactive AI features powered by the Gemini API.</p>
+                        <a href="#" class="font-semibold text-indigo-300 hover:underline">Live Demo</a>
+                    </div>
+                    <!-- AI Projects -->
+                    <div class="project-card glass-card rounded-xl p-6" data-category="ai">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">SpamSensi AI</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">Evaluated model trade-offs, selected optimal thresholds to balance false positives/negatives, and boosted F1-score by 75% with cross-validation.</p>
+                        <a href="https://github.com/Antim21/SpamSense-AI" target="_blank" class="font-semibold text-indigo-300 hover:underline">View Project</a>
+                    </div>
+                    <div class="project-card glass-card rounded-xl p-6" data-category="ai">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">AI Meeting Summarizer</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">A collection of LLM apps with AI Agents and RAG using OpenAI, Gemini, and open-source models to summarize meetings.</p>
+                        <a href="https://ai-meeting-summarizer-antim.netlify.app/" target="_blank" class="font-semibold text-indigo-300 hover:underline">Live Demo</a>
+                    </div>
+                    <div class="project-card glass-card rounded-xl p-6" data-category="ai">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-2">Voice assistant Using Python</h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">This project is a voice assistant developed using Python, designed to perform tasks and provide information based on voice commands.</p>
+                        <a href="https://github.com/Antim21/Voice-assistant-Using-Python" target="_blank" class="font-semibold text-indigo-300 hover:underline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AI Playground Section -->
+        <section id="playground" class="relative py-20 sm:py-32 overflow-hidden">
+             <div class="absolute inset-0 z-0">
+                <img src="https://images.pexels.com/photos/1629998/pexels-photo-1629998.jpeg" alt="AI Playground background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl font-bold text-white text-shadow">AI Playground</h2>
+                    <p class="mt-3 text-2xl font-cursive text-slate-200 text-shadow">Experiment with the power of Gemini.</p>
+                </div>
+                <div class="max-w-screen-md mx-auto">
+                    <div class="glass-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-white text-shadow mb-4"> Blog Post Idea Generator✨ </h3>
+                        <p class="mb-4 text-base leading-relaxed text-slate-200 text-shadow">Enter a topic and let AI brainstorm some creative blog post titles for you.</p>
+                        <div class="flex gap-2">
+                            <input type="text" id="blog-topic-input" class="w-full p-3 rounded-lg bg-white/20 border border-slate-400 text-white placeholder-slate-300 focus:ring-sky-500 focus:border-sky-500" placeholder="e.g., 'machine learning'">
+                            <button id="generate-ideas-btn" class="bg-sky-600 text-white font-bold py-3 px-5 rounded-lg hover:bg-sky-700 transition">Generate</button>
+                        </div>
+                        <div id="ideas-loader" class="hidden justify-center mt-6"><div class="loader"></div></div>
+                        <div id="ideas-output" class="mt-6 text-base leading-relaxed text-white text-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="relative py-20 sm:py-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://i.redd.it/bnef3fhuqm261.png" alt="Abstract contact background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40"></div> <!-- Overlay for readability -->
+            </div>
+            <div class="relative z-10 max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-handwriting text-5xl sm:text-6xl font-bold text-white drop-shadow-lg">Get In Touch</h2>
+                    <p class="mt-3 text-2xl font-cursive text-slate-200 drop-shadow-lg">Have a question or want to work together? Drop me a line!</p>
+                </div>
+                <!-- Formspree Contact Form -->
+                <form action="https://formspree.io/f/xpwjwgew" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-slate-200">Your Name</label>
+                        <input type="text" name="name" id="name" class="bg-white/10 border border-slate-400 text-white placeholder-slate-300 block w-full p-3 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-slate-200">Your Email</label>
+                        <input type="email" name="_replyto" id="email" class="bg-white/10 border border-slate-400 text-white placeholder-slate-300 block w-full p-3 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="name@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-slate-200">Your Message</label>
+                        <textarea id="message" name="message" rows="6" class="bg-white/10 border border-slate-400 text-white placeholder-slate-300 block w-full p-3 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="Leave a comment..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-3.5 text-center transition-colors">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-100 border-t">
+        <div class="max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-4 sm:mb-0">
+                    <span class="font-handwriting self-center text-3xl font-semibold whitespace-nowrap text-slate-800">Antim Maurya</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-lg font-medium text-slate-600 sm:mb-0 font-cursive">
+                    <li><a href="#about" class="hover:underline me-4 md:me-6">About</a></li>
+                    <li><a href="#blog" class="hover:underline me-4 md:me-6">Blog</a></li>
+                    <li><a href="#projects" class="hover:underline me-4 md:me-6">Projects</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-slate-200 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-slate-500 sm:text-center">© 2024 <a href="#" class="hover:underline">Antim Maurya™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
