@@ -5,37 +5,41 @@ const ideasOutput = document.getElementById('ideas-output');
 const generateIdeasBtn = document.getElementById('generate-ideas-btn');
 const blogTopicInput = document.getElementById('blog-topic-input');
 
-const apiKey = " "; // Leave empty, handled by the environment
 async function callGemini(prompt) {
-    // This relative URL will automatically work on Cloudflare
-    const functionUrl = '/gemini'; 
-        const payload = {
-        contents: [{ parts: [{ text: prompt }] }]
-    };
-
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch('/api/gemini', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+            body: JSON.stringify({ prompt })
         });
 
         if (!response.ok) {
-            throw new Error(`API call failed with status: ${response.status}`);
+            const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+            throw new Error(errorData.error || `API call failed with status: ${response.status}`);
         }
 
         const result = await response.json();
         
-        if (result.candidates && result.candidates.length > 0) {
-            return result.candidates[0].content.parts[0].text;
+        if (result.text) {
+            return result.text;
+        } else if (result.error) {
+            throw new Error(result.error);
         } else {
             return "Sorry, I couldn't generate a response. Please try again.";
         }
 
     } catch (error) {
-        console.error("Gemini API call error:", error);
-        return "An error occurred. Please check the console for details.";
+        console.error("API call error:", error);
+        return `Error: ${error.message}`;
     }
+}
+
+// Format markdown-style text to HTML
+function formatText(text) {
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // **bold** to <strong>
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')             // *italic* to <em>
+        .replace(/\n/g, '<br>');                          // newlines to <br>
 }
 
 // Blog Idea Generator Logic
@@ -53,7 +57,7 @@ generateIdeasBtn.addEventListener('click', async () => {
     const result = await callGemini(prompt);
     
     ideasLoader.style.display = 'none';
-    ideasOutput.innerHTML = result.replace(/\n/g, '<br>');
+    ideasOutput.innerHTML = formatText(result);
 });
 
 // --- Existing Page Logic ---
